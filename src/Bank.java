@@ -6,5 +6,20 @@ public class Bank {
     private ArrayList<User> user; // list of all the users for this bank
     private ArrayList<Account> accounts; // list of all the accounts for this bank
 
+    public String getNewUserUUID() {
 
+    }
+
+    public String getNewAccountUUID() {
+
+    }
+
+    /*
+    add an account
+    @param anAcct   the account to add
+     */
+
+    public void addAccount(Account anAcct) {
+        this.accounts.add(anAcct);
+    }
 }

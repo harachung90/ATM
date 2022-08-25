@@ -49,4 +49,12 @@ public class User {
     public void addAccount(Account anAcct) {
         this.accounts.add(anAcct);
     }
+
+    /*
+return the user's UUID
+@return the uuid
+ */
+    public String getUUID() {
+        return this.uuid;
+    }
 }

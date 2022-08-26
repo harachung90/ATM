@@ -25,10 +25,13 @@ public class Account {
 
         // initialise transactions
         this.transactions = new ArrayList<Transaction>();
-
-        // add to holder and bank list
-        holder.addAccount(this);
-        theBank.addAccount(this);
     }
 
+    /*
+    get the account ID
+    @return the uuid
+     */
+    public String getUUID() {
+        return this.uuid;
+    }
 }

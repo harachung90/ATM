@@ -7,4 +7,32 @@ public class Transaction {
     private String memo; // the memo for this transaction ex) rent money for this month
     private Account inAccount; // the account in which the transaction was performed
 
+
+    /*
+create a new transaction
+@param amount       the amount transacted
+@param inAccount    the account the transaction belongs to
+ */
+
+    public Transaction(double amount, Account inAccount) {
+        this.amount = amount;
+        this.inAccount = inAccount;
+        this.timestamp = new Date();
+        this.memo = "";
+    }
+
+    /*
+    create a new transaction
+    @param amount       the amount transacted
+    @param memo         the memo for the transaction
+    @param inAccount    the account the transaction belongs to
+     */
+
+    public Transaction(double amount, String memo, Account inAccount) {
+        // call the two-argument constructor first
+        this(amount, inAccount);
+
+        // set the memo
+        this.memo = memo;
+    }
 }

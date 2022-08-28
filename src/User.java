@@ -75,4 +75,25 @@ return the user's UUID
         }
         return false;
     }
+
+    /*
+    return the user's first name
+    @return the first name
+     */
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+
+
+    /*
+    print summaries for the accounts of this user
+     */
+    public void printAccountsSummary() {
+        System.out.printf("\n\n%s's accounts summary", this.firstName);
+        for (int a = 0; a < this.accounts.size(); a++) {
+            System.out.printf("%d) %s\n", this.accounts.get(a).getSummaryLine());
+        }
+        System.out.println();
+    }
 }

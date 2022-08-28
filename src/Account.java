@@ -34,4 +34,21 @@ public class Account {
     public String getUUID() {
         return this.uuid;
     }
+
+    /*
+    get summary line for the account
+    @return the string summary
+     */
+    public String getSummaryLine() {
+        //get the account's balance
+        double balance = this.getBalance();
+
+        //format the summary line, depending on the whether the balance is negative
+        if (balance >= 0) {
+            return String.format("%s : $%.02f : %s", this.uuid, balance, this.name);
+        } else {
+            return String.format("%s : $(%.02f) : %s", this.uuid, balance, this,name);
+        }
+    }
+
 }

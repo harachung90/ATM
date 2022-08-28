@@ -131,4 +131,12 @@ public class Bank {
         //if we haven't found the user or have an incorrect pin
         return null;
     }
+
+    /*
+    get the name of the bank
+    @return the name of the bank
+     */
+    public String getName() {
+        return this.name;
+    }
 }

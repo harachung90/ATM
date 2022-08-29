@@ -51,4 +51,24 @@ public class Account {
         }
     }
 
+    /*
+    get the balance of this account by adding the amounts of the transactions
+    @return the balance value
+     */
+    public double getBalance() {
+        double balance = 0;
+        for (Transaction t: this.transactions ) {
+            balance += t.getAmount();
+        }
+        return balance;
+    }
+
+    public void printTransHistory() {
+        System.out.printf("\nTransaction history for account %s\n", this,uuid);
+        for (int t = this.transactions.size()-1; t >= 0; t--) {
+            System.out.printf(this.transactions.get(t).getSummaryLine());
+        }
+        System.out.println();
+    }
+
 }

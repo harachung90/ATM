@@ -92,8 +92,24 @@ return the user's UUID
     public void printAccountsSummary() {
         System.out.printf("\n\n%s's accounts summary", this.firstName);
         for (int a = 0; a < this.accounts.size(); a++) {
-            System.out.printf("%d) %s\n", this.accounts.get(a).getSummaryLine());
+            System.out.printf("%d) %s\n", a+1, this.accounts.get(a).getSummaryLine());
         }
         System.out.println();
+    }
+
+    /*
+    get the number of accounts of the user
+    @return the number of accounts
+     */
+    public int numAccounts() {
+        return this.accounts.size();
+    }
+
+    /*
+    print transaction history for a particular account
+    @param acctIdx  the index of the account to use
+     */
+    public void printAcctTransHistory(int acctIdx) {
+        this.accounts.get(acctIdx).printTransHistory();
     }
 }

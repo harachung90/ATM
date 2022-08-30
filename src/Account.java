@@ -63,6 +63,9 @@ public class Account {
         return balance;
     }
 
+    /*
+    print the transaction history of the account
+     */
     public void printTransHistory() {
         System.out.printf("\nTransaction history for account %s\n", this,uuid);
         for (int t = this.transactions.size()-1; t >= 0; t--) {

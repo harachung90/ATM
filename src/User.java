@@ -112,4 +112,13 @@ return the user's UUID
     public void printAcctTransHistory(int acctIdx) {
         this.accounts.get(acctIdx).printTransHistory();
     }
+
+    /*
+    get the balance of a particular account
+    @param acctIdx      the index of the account to use
+    @return             the balance of the account
+     */
+    public double getAcctBalance(int acctIdx) {
+        return this.accounts.get(acctIdx).getBalance();
+    }
 }

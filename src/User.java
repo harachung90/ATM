@@ -92,7 +92,7 @@ return the user's UUID
     public void printAccountsSummary() {
         System.out.printf("\n\n%s's accounts summary", this.firstName);
         for (int a = 0; a < this.accounts.size(); a++) {
-            System.out.printf("%d) %s\n", a+1, this.accounts.get(a).getSummaryLine());
+            System.out.printf("  %d) %s\n", a+1, this.accounts.get(a).getSummaryLine());
         }
         System.out.println();
     }
@@ -120,5 +120,24 @@ return the user's UUID
      */
     public double getAcctBalance(int acctIdx) {
         return this.accounts.get(acctIdx).getBalance();
+    }
+
+    /*
+    get the UUID of a particular account
+    @param acctIDx  the index of the account to use
+    @return         the UUID of the account
+     */
+    public String getAcctUUID(int acctIdx) {
+        return this.accounts.get(acctIdx).getUUID();
+    }
+
+    /*
+    add a transaction to a particular account
+    @param acctIdx      the index of the account
+    @param amount       the amount of the transaction
+    @param memo         the memo of the transaction
+     */
+    public void addAcctTransaction(int acctIdx, double amount, String memo) {
+        this.accounts.get(acctIdx).addTransaction(amount, memo);
     }
 }
